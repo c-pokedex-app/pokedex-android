@@ -4,13 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.cursokotlin.pokedexproyect"
-    compileSdk {
-        version = release(37)
-    }
+    namespace = "com.ezequielcano.pokedex"
+    compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.cursokotlin.pokedexproyect"
+        applicationId = "com.ezequielcano.pokedex"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
@@ -44,6 +42,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+
+
+    implementation(libs.androidx.navigation.compose)
+
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)

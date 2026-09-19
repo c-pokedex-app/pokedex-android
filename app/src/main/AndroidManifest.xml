@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PokedexProyect">
         <activity
-            android:name="com.cursokotlin.pokedexproyect.MainActivity"
+            android:name="com.ezequielcano.pokedex.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.PokedexProyect"
