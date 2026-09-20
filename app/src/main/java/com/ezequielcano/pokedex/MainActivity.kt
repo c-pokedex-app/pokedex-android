@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.ezequielcano.pokedex.core.navigation.PokedexNavGraph
 import com.ezequielcano.pokedex.ui.theme.PokedexProyectTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +21,12 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             PokedexProyectTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                //Creo el objeto para controlar la navegacion
+                val navController = rememberNavController()
+                //Llamamos a nuestro graph de navegacion pasando el identificador(la pantalla)
+                PokedexNavGraph(navController = navController)
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    PokedexProyectTheme {
-        Greeting("Android")
-    }
-}
