@@ -41,7 +41,7 @@ fun PokemonCard(
     //Obtenemos el color base del type
     val baseColor = getPokemonTypeColor(typeName)
     //Creamos un color suave para el fondo de la tarjeta
-    val cardBackgroundColor = baseColor.copy(alpha = 0.56f)
+    val cardBackgroundColor = baseColor.copy(alpha = 0.55f)
     //Contenedor principal
     Card(
         modifier = Modifier
@@ -86,7 +86,7 @@ fun PokemonCard(
     }
 }
 
-@Preview
+@Preview(showSystemUi = true)
 @Composable
 fun PokemonCardPreview(){
     PokemonCard(

@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.ezequielcano.pokedex.presentation.home.HomeScreen
 
 
 @Composable
@@ -15,17 +16,18 @@ fun PokedexNavGraph(navController: NavHostController){
         //Que controlador va usar
         navController = navController,
         //Cual es la primer ruta que debe mostrar
-        startDestination = Screen.Splash.route
+        startDestination = Screen.Home.route
     ){
         //aca definimos que se dibuja en cada ruta
         composable(Screen.Splash.route){
             Text(
-                text = "Pantalla Splash"
+                text = "Pantalla Home"
             )
         }
         composable(Screen.Home.route){
-            Text(
-                text = "Pantalla Home"
+            //Pantalla Home
+            HomeScreen(
+
             )
         }
     }

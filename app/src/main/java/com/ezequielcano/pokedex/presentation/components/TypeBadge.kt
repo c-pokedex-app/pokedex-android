@@ -8,6 +8,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.ezequielcano.pokedex.ui.theme.getPokemonTypeColor
@@ -34,7 +35,8 @@ fun TypeBadge(
             modifier = Modifier
                 .padding(horizontal = 12.dp)
                 .padding(vertical = 4.dp),
-            style = MaterialTheme.typography.bodyMedium
+            style = MaterialTheme.typography.bodyMedium,
+            fontWeight = FontWeight.Light
         )
     }
 }
